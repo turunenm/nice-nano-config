@@ -55,11 +55,11 @@
                 = <&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>
                 ;
         };
-        //  END MACROS
+        // END MACROS
         win_uml_al: win_uml_al {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp a>, <&ac_uml_al>;
+            bindings = <&kp A>, <&ac_uml_al>;
             mods = <(MOD_RCTL)>;
         };
         win_uml_au: win_uml_au {
@@ -71,7 +71,7 @@
         win_uml_ol: win_uml_ol {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp o>, <&ac_uml_ol>;
+            bindings = <&kp O>, <&ac_uml_ol>;
             mods = <(MOD_RCTL)>;
         };
         win_uml_ou: win_uml_ou {
