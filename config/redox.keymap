@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    macros {
+    behaviors {
         ac_uml_al: ac_uml_al {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -55,11 +55,7 @@
                 = <&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>
                 ;
         };
-    };
-};
-
-/ {
-    behaviors {
+        //  END MACROS
         win_uml_al: win_uml_al {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
