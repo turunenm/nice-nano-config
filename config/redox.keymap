@@ -89,17 +89,17 @@
 
         default_layer {
 // -----------------------------------------------------------------------------------------------------------------------
-// | ESC   |  1  |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0  |    \   |
-// | TAB   |  Q  |  W  |  F  |  P  |  G  |   (   |           ---        |  )    |  J  |  L  |  U   |  Y   |  ;  |    -   |
-// | 4sp   |  A  |  R  |  S  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O  |    '   |
-// | SHIFT |  Z  |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  K  |  M  |  ,   |  .   |  /  |  SHIFT |
-// | CRTL  | GUI | ESC | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | LEFT | DOWN |  UP |  RIGHT |
+// | ESC   |  1  |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   \   |
+// | TAB   |  Q  |  W  |  F  |  P  |  G  |   (   |           ---        |  )    |  J  |  L  |  U   |  Y   |  ;   |   -   |
+// | GUI   |  A  |  R  |  S  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O   |   '   |
+// | SHIFT |  Z  |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  K  |  M  |  ,   |  .   |  /   | SHIFT |
+// | CRTL  | GUI | ESC | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
-   &kp ESC       &kp N1    &kp N2    &kp N3  &kp N4   &kp N5                                           &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp BSLH
-   &kp TAB       &kp Q     &kp W     &kp F   &kp P    &kp G  &kp LPAR                        &kp RPAR  &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp MINUS
-   &four_spaces  &kp A     &kp R     &kp S   &kp T    &kp D  &kp LBKT                        &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
-   &kp LSHFT     &kp Z     &kp X     &kp C   &kp V    &kp B  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END   &kp K   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-   &kp LCTRL     &kp LGUI  &kp ESC   &kp LALT     &mo 1      &kp RET    &kp DEL    &kp BKSP  &kp SPACE       &mo 2       &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
+   &kp ESC    &kp N1    &kp N2    &kp N3  &kp N4   &kp N5                                           &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp BSLH
+   &kp TAB    &kp Q     &kp W     &kp F   &kp P    &kp G  &kp LPAR                        &kp RPAR  &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp MINUS
+   &LGUI      &kp A     &kp R     &kp S   &kp T    &kp D  &kp LBKT                        &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
+   &kp LSHFT  &kp Z     &kp X     &kp C   &kp V    &kp B  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END   &kp K   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+   &kp LCTRL  &kp LGUI  &kp ESC   &kp LALT     &mo 1      &kp RET    &kp DEL    &kp BKSP  &kp SPACE       &mo 2     &kp LCTRL  &kp DOWN  &kp UP    &kp RIGHT
             >;
 
         };
@@ -108,15 +108,15 @@
 // ------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1  |  2  |  3  |  4  |  5  |                   ---                |  6    |  7  |  8   |  9   |  0  |  \    |
 // | TAB   |  !  |  @  |  #  |  ~  |  %  |   (   |           ---        |  )    |  ^    |  &  |  *   |  _   |  +  |  -    |
-// | 4sp   |  ?  |  "  |  |  |  {  |  }  |   [   |           ---        |  ]    |  4sp  |  $  |  \   |  -   |  =  |  '    |
+// | GUI   |  ?  |  "  |  |  |  {  |  }  |   [   |           ---        |  ]    |  4sp  |  $  |  \   |  -   |  =  |  '    |
 // | SHIFT | ESC |  `  |  /  |  [  |  ]  | PG_UP | PG_DOWN | --- | HOME | END   |  :    |  (  |  )   |  <   |  >  | SHIFT |
-// | CRTL  | GUI | ALT | ESC |   LOWER   | RET   | BKSP    | --- | DEL  | SPACE |     RAISE   | LEFT | DOWN |  UP | RIGHT |
+// | CRTL  | GUI | ESC | ALT |   LOWER   | RET   | BKSP    | --- | DEL  | SPACE |     RAISE   | CTRL | LEFT |  UP | RIGHT |
             bindings = <
    &trans   &trans     &trans     &trans    &trans     &trans                                     &trans        &trans    &trans     &trans     &trans     &trans
    &trans   &kp EXCL   &kp AT     &kp HASH  &kp TILDE  &kp PRCNT  &trans                  &trans  &kp CARET     &kp AMPS  &kp ASTRK  &kp UNDER  &kp PLUS   &trans
    &trans   &kp QMARK  &kp DQT    &kp PIPE  &kp LBRC   &kp RBRC   &trans                  &trans  &four_spaces  &kp DLLR  &kp BSLH   &kp MINUS  &kp EQUAL  &trans
    &trans   &kp ESC    &kp GRAVE  &kp FSLH  &kp LBKT   &kp RBKT   &trans  &trans  &trans  &trans  &kp COLON     &kp LPAR  &kp RPAR   &kp LT     &kp GT     &trans
-   &trans   &trans     &trans     &trans           &trans         &trans  &trans  &trans  &trans          &trans          &trans     &trans     &trans     &trans
+   &trans   &trans     &trans     &trans           &trans         &trans  &trans  &trans  &trans          &trans          &trans     &trans     &kp UP     &trans
             >;
         };
 
@@ -124,15 +124,15 @@
 // ----------------------------------------------------------------------------------------------------------------------------------
 // | F12        | F1  | F2  | F3    | F4    | F5   |                   ---                |  F6  |  F7 |  F8  |  F9  |  F10 | F11   |
 // | OUTPUT TGL | BT1 | BT2 | BT3   | BT4   | BT5  |   (   |           ---        |  )    |  (   |  7  |  8   |  9   |  -   |  *    |
-// | 4sp        | a   | o   | RCTRL | c-uml | RALT |   [   |           ---        |  ]    |  ,   |  4  |  5   |  6   |  +   |  /    |
+// | GUI        | a   | o   | RCTRL | c-uml | RALT |   [   |           ---        |  ]    |  ,   |  4  |  5   |  6   |  +   |  /    |
 // | SHIFT      | A   | O   | INS   | PSCRN | SLCK | PG_UP | PG_DOWN | --- | HOME | END   |  RET |  1  |  2   |  3   |  0   | SHIFT |
-// | CRTL       | GUI | ALT | ESC   |     LOWER    |  RET  | BKSP    | --- | DEL  | SPACE |     RAISE  | LEFT | DOWN |  UP  | RIGHT |
+// | CRTL       | GUI | ESC | ALT   |     LOWER    |  RET  | BKSP    | --- | DEL  | SPACE |    RAISE   | CTRL | LEFT |  UP  | RIGHT |
             bindings = <
    &kp F12       &kp F1        &kp F2        &kp F3        &kp F4          &kp F5                                         &kp F6     &kp F7  &kp F8  &kp F9   &kp F10    &kp F11
    &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4   &trans                  &trans  &kp LPAR   &kp N7  &kp N8  &kp N9   &kp MINUS  &kp ASTERISK
    &trans        &kp A         &kp O         &kp RCTRL     &kp RA(RS(DQT)) &kp RALT       &trans                  &trans  &kp COMMA  &kp N4  &kp N5  &kp N6   &kp PLUS   &kp FSLH
    &trans        &kp LS(A)     &kp LS(O)     &kp INS       &kp PSCRN       &kp SLCK       &trans  &trans  &trans  &trans  &kp RET    &kp N1  &kp N2  &kp N3   &kp N0     &trans
-   &trans        &trans        &trans        &trans                 &trans                &trans  &trans  &trans  &trans        &trans       &trans  &trans   &trans     &trans
+   &trans        &trans        &trans        &trans                 &trans                &trans  &trans  &trans  &trans        &trans       &trans  &trans   &kp UP     &trans
             >;
         };
     };
