@@ -113,7 +113,7 @@
 // | CRTL  | GUI | ALT | ESC |   LOWER   | RET   | BKSP    | --- | DEL  | SPACE |     RAISE   | LEFT | DOWN |  UP | RIGHT |
             bindings = <
    &trans   &trans     &trans     &trans    &trans     &trans                                     &trans        &trans    &trans     &trans     &trans     &trans
-   &kp ESC  &kp EXCL   &kp AT     &kp HASH  &kp TILDE  &kp PRCNT  &trans                  &trans  &kp CARET     &kp AMPS  &kp ASTRK  &kp UNDER  &kp PLUS   &kp trans
+   &kp ESC  &kp EXCL   &kp AT     &kp HASH  &kp TILDE  &kp PRCNT  &trans                  &trans  &kp CARET     &kp AMPS  &kp ASTRK  &kp UNDER  &kp PLUS   &trans
    &trans   &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC   &kp BSLH   &trans                  &trans  &four_spaces  &kp DLLR  &kp BSLH   &kp MINUS  &kp EQUAL  &trans
    &trans   &kp ESC    &kp GRAVE  &kp FSLH  &kp LBKT   &kp RBKT   &trans  &trans  &trans  &trans  &kp COLON     &kp LPAR  &kp RPAR   &kp LT     &kp GT     &trans
    &trans   &trans     &trans     &trans           &trans         &trans  &trans  &trans  &trans          &trans          &trans     &trans     &trans     &trans
