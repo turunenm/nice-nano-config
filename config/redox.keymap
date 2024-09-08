@@ -69,7 +69,7 @@
         win_uml_A: win_uml_A {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&win_uml_a>, <&ac_uml_A>;
+            bindings = <&ac_uml_a>, <&ac_uml_A>;
             mods = <(MOD_LSFT)>;
         };
         win_uml_o: win_uml_o {
@@ -78,11 +78,10 @@
             bindings = <&kp o>, <&ac_uml_o>;
             mods = <(MOD_RCTL)>;
         };
-        behaviors {
         win_uml_O: win_uml_O {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&win_uml_o>, <&ac_uml_O>;
+            bindings = <&ac_uml_o>, <&ac_uml_O>;
             mods = <(MOD_LSFT)>;
         };
     };
