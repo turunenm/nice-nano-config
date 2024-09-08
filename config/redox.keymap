@@ -12,7 +12,7 @@
 
 / {
     macros {
-        ac_uml_a: ac_uml_a {
+        ac_uml_al: ac_uml_al {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -21,7 +21,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        ac_uml_A: ac_uml_A {
+        ac_uml_au: ac_uml_au {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -30,7 +30,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        ac_uml_o: ac_uml_o {
+        ac_uml_ol: ac_uml_ol {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -39,7 +39,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        ac_uml_O: ac_uml_O {
+        ac_uml_ou: ac_uml_ou {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -60,28 +60,28 @@
 
 / {
     behaviors {
-        win_uml_a: win_uml_a {
+        win_uml_al: win_uml_al {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp a>, <&ac_uml_a>;
+            bindings = <&kp a>, <&ac_uml_al>;
             mods = <(MOD_RCTL)>;
         };
-        win_uml_A: win_uml_A {
+        win_uml_au: win_uml_au {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ac_uml_a>, <&ac_uml_A>;
+            bindings = <&ac_uml_al>, <&ac_uml_au>;
             mods = <(MOD_LSFT)>;
         };
-        win_uml_o: win_uml_o {
+        win_uml_ol: win_uml_ol {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp o>, <&ac_uml_o>;
+            bindings = <&kp o>, <&ac_uml_ol>;
             mods = <(MOD_RCTL)>;
         };
-        win_uml_O: win_uml_O {
+        win_uml_ou: win_uml_ou {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ac_uml_o>, <&ac_uml_O>;
+            bindings = <&ac_uml_ou>, <&ac_uml_ol>;
             mods = <(MOD_LSFT)>;
         };
     };
