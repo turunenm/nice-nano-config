@@ -104,13 +104,13 @@
 // -------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1    |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   +   |
 // | TAB   |  Q    |  W  |  F  |  P  |  G  |   (   |           ---        |  )    |  J  |  L  |  U   |  Y   |  ;   |   -   |
-// | ESC   |  A    |  R  |  S  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O   |   '   |
+// | ESC   |  A    |  S  |  R  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O   |   '   |
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  K  |  M  |  ,   |  .   |  /   | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
    &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4   &kp N5                                           &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp PLUS
    &kp TAB    &kp Q      &kp W     &kp F   &kp P    &kp G  &kp LPAR                        &kp RPAR  &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp MINUS
-   &kp ESC    &kp A      &kp R     &kp S   &kp T    &kp D  &kp LBKT                        &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
+   &kp ESC    &kp A      &kp S     &kp R   &kp T    &kp D  &kp LBKT                        &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
    &kp LSHFT  &kp Z      &kp X     &kp C   &kp V    &kp B  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END   &kp K   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
    &kp LCTRL  &kp PSCRN  &kp LGUI  &kp LALT     &mo 1      &kp RET    &kp DEL    &kp BKSP  &kp SPACE       &mo 2     &kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
