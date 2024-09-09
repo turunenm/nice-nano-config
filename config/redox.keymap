@@ -81,14 +81,6 @@
                 , <&macro_press &sl MACRO_PLACEHOLDER>
                 ;
         };
-        csl3: csl3 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &csl 3 MACRO_PLACEHOLDER>
-                ;
-        };
     };
 };
 
@@ -159,10 +151,10 @@
 // | CRTL       | PSCRN | GUI | ALT |   TODEF   | RET   | DEL     | --- | BKSP | SPACE |   TODEF    |  0  | LEFT | DOWN | RIGHT |
             bindings = <
    &kp F12       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                            &kp F6       &kp F7    &kp F8    &kp F9      &kp F10         &kp F11
-   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &csl3 LPAR  &csl3 RPAR   &csl3 N7  &csl3 N8  &csl3 N9    &csl3 PLUS      &csl3 MINUS
-   &trans        &w_uml_al     &w_uml_au     &w_uml_ou     &w_uml_ol     &kp INS       &trans                  &trans      &csl3 COMMA  &csl3 N4  &csl3 N5  &csl3 N6    &csl3 ASTERISK  &csl3 FSLH
-   &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &csl3 RET    &csl3 N1  &csl3 N2  &csl3 N3    &csl3 UP        &trans
-   &trans        &trans        &trans        &trans               &to 0                &trans  &trans  &trans  &trans               &to 0         &csl3 N0  &csl3 LEFT  &csl3 DOWN      &csl3 RIGHT
+   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &csl 3 LPAR  &csl 3 RPAR   &csl 3 N7  &csl 3 N8  &csl 3 N9    &csl 3 PLUS      &csl 3 MINUS
+   &trans        &w_uml_al     &w_uml_au     &w_uml_ou     &w_uml_ol     &kp INS       &trans                  &trans      &csl 3 COMMA  &csl 3 N4  &csl 3 N5  &csl 3 N6    &csl 3 ASTERISK  &csl 3 FSLH
+   &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &csl 3 RET    &csl 3 N1  &csl 3 N2  &csl 3 N3    &csl 3 UP        &trans
+   &trans        &trans        &trans        &trans               &to 0                &trans  &trans  &trans  &trans               &to 0         &csl 3 N0  &csl 3 LEFT  &csl 3 DOWN      &csl 3 RIGHT
             >;
         };
     };
