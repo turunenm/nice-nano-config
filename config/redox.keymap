@@ -64,14 +64,36 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        four_spaces: four_spaces {
+        spc4: spc4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>
                 ;
         };
+        csl: csl {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_2to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_param_1to1>
+                , <&macro_press &sl MACRO_PLACEHOLDER>
+                ;
+        };
+        csl0: csl0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &csl 0 MACRO_PLACEHOLDER>
+                ;
+        };
     };
+};
+
+&sl {
+    release-after-ms = <5000>;
 };
 
 / {
@@ -104,10 +126,10 @@
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   TOADJ   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
    &trans   &trans    &trans     &trans    &trans    &trans                                        &trans     &trans     &trans     &trans    &trans    &trans
-   &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT     &trans                  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-   &trans   &l_uml_a  &kp GRAVE  &kp SQT   &kp DQT   &four_spaces  &trans                  &trans  &kp ESC    &kp QMARK  &kp COMMA  &kp DOT   &l_uml_o  &trans
-   &trans   &trans    &trans     &trans    &trans    &trans        &trans  &trans  &trans  &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP    &trans
-   &trans   &trans    &trans     &trans         &trans             &trans  &trans  &trans  &trans          &to 3         &trans     &trans    &trans    &trans
+   &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+   &trans   &l_uml_a  &kp GRAVE  &kp SQT   &kp DQT   &spc4      &trans                  &trans  &kp ESC    &kp QMARK  &kp COMMA  &kp DOT   &l_uml_o  &trans
+   &trans   &trans    &trans     &trans    &trans    &trans     &trans  &trans  &trans  &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP    &trans
+   &trans   &trans    &trans     &trans         &trans          &trans  &trans  &trans  &trans          &sl 3         &trans     &trans    &trans    &trans
             >;
         };
 
@@ -124,7 +146,7 @@
    &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                  &trans  &kp TILDE  &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI   &trans
    &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                  &trans  &kp ESC    &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
    &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP     &trans
-   &trans  &trans  &trans    &trans          &to 3         &trans  &trans  &trans  &trans        &trans          &trans     &trans    &trans     &trans
+   &trans  &trans  &trans    &trans          &sl 3         &trans  &trans  &trans  &trans        &trans          &trans     &trans    &trans     &trans
             >;
        };
 
@@ -136,11 +158,11 @@
 // | SHIFT      | Z     |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  RET |  1  |  2  |  3   |  UP  | SHIFT |
 // | CRTL       | PSCRN | GUI | ALT |   TODEF   | RET   | DEL     | --- | BKSP | SPACE |   TODEF    |  0  | LEFT | DOWN | RIGHT |
             bindings = <
-   &kp F12       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                        &kp F6     &kp F7  &kp F8  &kp F9  &kp F10       &kp F11
-   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &trans  &kp LPAR   &kp N7  &kp N8  &kp N9  &kp PLUS      &kp MINUS
-   &trans        &w_uml_al     &w_uml_au     &w_uml_ou     &w_uml_ol     &kp INS       &trans                  &trans  &kp COMMA  &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp FSLH
-   &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &kp RET    &kp N1  &kp N2  &kp N3  &kp UP        &trans
-   &trans        &trans        &trans        &trans               &to 0                &trans  &trans  &trans  &trans        &to 0        &kp N0  &trans  &trans        &trans
+   &kp F12       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                            &kp F6       &kp F7    &kp F8    &kp F9      &kp F10         &kp F11
+   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &csl0 LPAR  &csl0 RPAR   &csl0 N7  &csl0 N8  &csl0 N9    &csl0 PLUS      &csl0 MINUS
+   &trans        &w_uml_al     &w_uml_au     &w_uml_ou     &w_uml_ol     &kp INS       &trans                  &trans      &csl0 COMMA  &csl0 N4  &csl0 N5  &csl0 N6    &csl0 ASTERISK  &csl0 FSLH
+   &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &csl0 RET    &csl0 N1  &csl0 N2  &csl0 N3    &csl0 UP        &trans
+   &trans        &trans        &trans        &trans               &to 0                &trans  &trans  &trans  &trans               &to 0         &csl0 N0  &csl0 LEFT  &csl0 DOWN      &csl0 RIGHT
             >;
         };
     };
