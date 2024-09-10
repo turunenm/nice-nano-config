@@ -79,20 +79,18 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <1>;
             bindings
-                = <&macro_param_2to1>
+                = <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &to 0>
                 ;
         };
         bst0: bst0 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <1>;
             bindings
-                = <&macro_param_2to1>
+                = <&macro_param_1to1>
                 , <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
-                , <&macro_param_1to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_tap &to 0>
                 ;
         };
     };
