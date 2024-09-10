@@ -120,13 +120,13 @@
 // -------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1    |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   +   |
 // | TAB   |  Q    |  W  |  E  |  R  |  T  |   (   |           ---        |  )    |  Y  |  U  |  I   |  O   |  P   |   -   |
-// | ESC   |  A    |  S  |  D  |  f  |  G  |   [   |           ---        |  ]    |  H  |  J  |  K   |  L   |  :   |   '   |
+// | TAB   |  A    |  S  |  D  |  f  |  G  |   [   |           ---        |  ]    |  H  |  J  |  K   |  L   |  :   |   '   |
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  N  |  M  |  ,   |  .   |  /   | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
    &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4   &kp N5                                           &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp PLUS
    &kp TAB    &kp Q      &kp W     &kp E   &kp R    &kp T  &kp LPAR                        &kp RPAR  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp MINUS
-   &kp ESC    &kp A      &kp S     &kp D   &kp F    &kp G  &kp LBKT                        &kp RBKT  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+   &kp TAB    &kp A      &kp S     &kp D   &kp F    &kp G  &kp LBKT                        &kp RBKT  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
    &kp LSHFT  &kp Z      &kp X     &kp C   &kp V    &kp B  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
    &kp LCTRL  &kp PSCRN  &kp LGUI  &kp LALT     &mo 1      &kp RET    &kp DEL    &kp SPACE &kp SPACE       &mo 2     &kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
@@ -137,13 +137,13 @@
 // -------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1    |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   +   |
 // | TAB   |  Q    |  W  |  F  |  P  |  G  |   (   |           ---        |  )    |  J  |  L  |  U   |  Y   |  ;   |   -   |
-// | ESC   |  A    |  R  |  S  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O   |   '   |
+// | TAB   |  A    |  R  |  S  |  T  |  D  |   [   |           ---        |  ]    |  H  |  N  |  E   |  I   |  O   |   '   |
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  K  |  M  |  ,   |  .   |  /   | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
    &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4   &kp N5                                            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp PLUS
    &kp TAB    &kp Q      &kp W     &kp F   &kp P    &kp G  &kp LPAR                         &kp RPAR  &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp MINUS
-   &kp ESC    &kp A      &kp R     &kp S   &kp T    &kp D  &kp LBKT                         &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
+   &kp TAB    &kp A      &kp R     &kp S   &kp T    &kp D  &kp LBKT                         &kp RBKT  &kp H   &kp N   &kp E      &kp I     &kp O     &kp SQT
    &kp LSHFT  &kp Z      &kp X     &kp C   &kp V    &kp B  &kp PG_UP  &kp PG_DN  &kp HOME   &kp END   &kp K   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
    &kp LCTRL  &kp PSCRN  &kp LGUI  &kp LALT     &mo 1      &kp BKSP   &kp BKSP   &kp SPACE  &kp SPACE       &mo 2     &kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
@@ -154,7 +154,7 @@
 // --------------------------------------------------------------------------------------------------------------------------
 // | ESC   |   1   |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0    |  +    |
 // | TAB   |   !   |  @  |  #  |  $  |  %  |   (   |           ---        |  )    |  ^  |  &  |  *   |  (   |  )    |  -    |
-// | GUI   |   Ä   |  `  |  '  |  "  | 4sp |   [   |           ---        |  ]    | ESC |  ?  |  ,   |  .   |  Ö    |  '    |
+// | TAB   |   Ä   |  `  |  '  |  "  | 4sp |   [   |           ---        |  ]    | ESC |  ?  |  ,   |  .   |  Ö    |  '    |
 // | SHIFT |   Z   |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  !  |  :  | HOME | END  |  UP   | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   TOADJ   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
@@ -171,7 +171,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1    |  2  |  3  |  4  |  5  |                   ---                |  6    |  7  |  8   |  9   |  0   |  +    |
 // | TAB   |  >    |  )  |  ]  |  }  |  \  |   (   |           ---        |  )    |  ^    |  &  |  *   |  _   |  +   |  -    |
-// | GUI   |  <    |  (  |  [  |  {  |  /  |   [   |           ---        |  ]    |  ESC  |  =  |  _   |  $   |  :   |  '    |
+// | TAB   |  <    |  (  |  [  |  {  |  /  |   [   |           ---        |  ]    |  ESC  |  =  |  _   |  $   |  :   |  '    |
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  !    |  :  | HOME | END  |  UP  | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   TOADJ   | RET   | DEL     | --- | BKSP | SPACE |     RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
@@ -187,7 +187,7 @@
 // ------------------------------------------------------------------------------------------------------------------------------
 // | F12        | F1    | F2  | F3  | F4  | F5  |                   ---                |  F6  |  F7 |  F8 |  F9  |  F10 | F11   |
 // | OUTPUT TGL | BT1   | BT2 | BT3 | BT4 | BT5 |   (   |           ---        |  )    |  (   |  7  |  8  |  9   |  +   |  -    |
-// | GUI        | ä     |  Ä  |  Ö  |  ö  | INS |   [   |           ---        |  ]    |  ,   |  4  |  5  |  6   |  *   |  /    |
+// | TAB        | ä     |  Ä  |  Ö  |  ö  | INS |   [   |           ---        |  ]    |  ,   |  4  |  5  |  6   |  *   |  /    |
 // | SHIFT      | Z     |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  RET |  1  |  2  |  3   |  UP  | SHIFT |
 // | CRTL       | PSCRN | GUI | ALT |   TODEF   | RET   | DEL     | --- | BKSP | SPACE |   TODEF    |  0  | LEFT | DOWN | RIGHT |
             bindings = <
