@@ -35,6 +35,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp N0 &kp N2 &kp N2 &kp N4>
                 , <&macro_release &kp LALT>
+                , <&macro_tap &to 0>
                 ;
         };
         w_uml_au: ac_uml_au {
@@ -44,6 +45,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp N0 &kp N1 &kp N9 &kp N6>
                 , <&macro_release &kp LALT>
+                , <&macro_tap &to 0>
                 ;
         };
         w_uml_ol: ac_uml_ol {
@@ -53,6 +55,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp N0 &kp N2 &kp N4 &kp N6>
                 , <&macro_release &kp LALT>
+                , <&macro_tap &to 0>
                 ;
         };
         w_uml_ou: ac_uml_ou {
@@ -62,6 +65,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp N0 &kp N2 &kp N1 &kp N4>
                 , <&macro_release &kp LALT>
+                , <&macro_tap &to 0>
                 ;
         };
         spc4: spc4 {
@@ -71,24 +75,27 @@
                 = <&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>
                 ;
         };
-        tol: tol {
+        to0: to0 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings
                 = <&macro_param_2to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_2to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_1to1>
+                , <&macro_tap &to MACRO_PLACEHOLDER>
+                ;
+        };
+        bst0: bst0 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_2to1>
+                , <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
                 , <&macro_param_1to1>
                 , <&macro_tap &to MACRO_PLACEHOLDER>
                 ;
         };
     };
-};
-
-&sl {
-    release-after-ms = <5000>;
 };
 
 / {
@@ -120,11 +127,11 @@
 // | SHIFT |   Z   |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  !  |  :  | HOME | END  |  UP   | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   TOADJ   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
-   &trans   &trans    &trans     &trans    &trans    &trans                                        &trans     &trans     &trans     &trans    &trans    &trans
+   &trans   &trans    &trans     &trans    &trans    &trans                                     &trans     &trans     &trans     &trans    &trans    &trans
    &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
    &trans   &l_uml_a  &kp GRAVE  &kp SQT   &kp DQT   &spc4      &trans                  &trans  &kp ESC    &kp QMARK  &kp COMMA  &kp DOT   &l_uml_o  &trans
    &trans   &trans    &trans     &trans    &trans    &trans     &trans  &trans  &trans  &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP    &trans
-   &trans   &trans    &trans     &trans         &trans          &trans  &trans  &trans  &trans          &sl 3         &trans     &trans    &trans    &trans
+   &trans   &trans    &trans     &trans         &trans          &trans  &trans  &trans  &trans          &to 3         &trans     &trans    &trans    &trans
             >;
         };
 
@@ -141,7 +148,7 @@
    &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                  &trans  &kp TILDE  &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI   &trans
    &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                  &trans  &kp ESC    &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
    &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP     &trans
-   &trans  &trans  &trans    &trans          &sl 3         &trans  &trans  &trans  &trans        &trans          &trans     &trans    &trans     &trans
+   &trans  &trans  &trans    &trans          &to 3         &trans  &trans  &trans  &trans        &trans          &trans     &trans    &trans     &trans
             >;
        };
 
@@ -153,11 +160,11 @@
 // | SHIFT      | Z     |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  RET |  1  |  2  |  3   |  UP  | SHIFT |
 // | CRTL       | PSCRN | GUI | ALT |   TODEF   | RET   | DEL     | --- | BKSP | SPACE |   TODEF    |  0  | LEFT | DOWN | RIGHT |
             bindings = <
-   &kp F12       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                          &kp F6       &kp F7    &kp F8    &kp F9      &kp F10          &kp F11
-   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans               &tol 3 LPAR  &tol 3 RPAR  &tol 3 N7 &tol 3 N8 &tol 3 N9   &tol 3 PLUS      &tol 3 MINUS
-   &trans        &w_uml_al     &w_uml_au     &w_uml_ou     &w_uml_ol     &kp INS       &trans               &trans       &tol 3 COMMA &tol 3 N4 &tol 3 N5 &tol 3 N6   &tol 3 ASTERISK  &tol 3 FSLH
-   &trans        &trans        &trans        &trans        &trans        &trans        &trans &trans &trans &trans       &tol 3 RET   &tol 3 N1 &tol 3 N2 &tol 3 N3   &tol 3 UP        &trans
-   &trans        &trans        &trans        &trans               &to 0                &trans &trans &trans &trans               &to 0          &tol 3 N0 &tol 3 LEFT &tol 3 DOWN      &tol 3 RIGHT
+   &to0 F12  &to0 F1    &to0 F2    &to0 F3    &to0 F4    &to0 F5                                  &to0 F6   &to0 F7  &to0 F8  &to0 F9   &to0 F10      &to0 F11
+   &trans    &bst0 0    &bst0 1    &bst0 2    &bst0 3    &bst0 4   &trans               &kp LPAR  &kp RPAR  &kp N7   &kp N8   &kp N9    &kp PLUS      &kp MINUS
+   &trans    &w_uml_al  &w_uml_au  &w_uml_ou  &w_uml_ol  &to0 INS  &trans               &trans    &kp COMMA &kp N4   &kp N5   &kp N6    &kp ASTERISK  &kp FSLH
+   &trans    &trans     &trans     &trans     &trans     &trans    &trans &trans &trans &trans    &kp RET   &kp N1   &kp N2   &kp N3    &kp UP        &trans
+   &trans    &trans     &trans     &trans           &to 0          &trans &trans &trans &trans         &to 0         &kp N0   &kp LEFT  &kp DOWN      &kp RIGHT
             >;
         };
     };
