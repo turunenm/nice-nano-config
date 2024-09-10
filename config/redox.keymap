@@ -76,7 +76,7 @@
                 ;
         };
         to0: to0 {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
                 = <&macro_param_1to1>
@@ -85,7 +85,7 @@
                 ;
         };
         bst0: bst0 {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
                 = <&macro_param_1to1>
