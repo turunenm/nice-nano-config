@@ -93,6 +93,17 @@
                 , <&macro_tap &to 0>
                 ;
         };
+        bct0: bct0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
+                , <&macro_tap &bt BT_CLR>
+                , <&macro_tap &to 0>
+                ;
+        };
+
     };
 };
 
@@ -159,7 +170,7 @@
 // | CRTL       | PSCRN | GUI | ALT |   TODEF   | RET   | DEL     | --- | BKSP | SPACE |   TODEF    |  0  | LEFT | DOWN | RIGHT |
             bindings = <
    &to0 F12  &to0 F1    &to0 F2    &to0 F3    &to0 F4    &to0 F5                                  &to0 F6   &to0 F7  &to0 F8  &to0 F9   &to0 F10      &to0 F11
-   &trans    &bst0 0    &bst0 1    &bst0 2    &bst0 3    &bst0 4   &trans               &kp LPAR  &kp RPAR  &kp N7   &kp N8   &kp N9    &kp PLUS      &kp MINUS
+   &trans    &bst0 0    &bst0 1    &bst0 2    &bt BT_NXT    &bt BT_CLR   &trans               &kp LPAR  &kp RPAR  &kp N7   &kp N8   &kp N9    &kp PLUS      &kp MINUS
    &trans    &w_uml_al  &w_uml_au  &w_uml_ou  &w_uml_ol  &to0 INS  &trans               &trans    &kp COMMA &kp N4   &kp N5   &kp N6    &kp ASTERISK  &kp FSLH
    &trans    &trans     &trans     &trans     &trans     &trans    &trans &trans &trans &trans    &kp RET   &kp N1   &kp N2   &kp N3    &kp UP        &trans
    &trans    &trans     &trans     &trans           &to 0          &trans &trans &trans &trans         &to 0         &kp N0   &kp LEFT  &kp DOWN      &kp RIGHT
