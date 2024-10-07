@@ -154,14 +154,14 @@
 // --------------------------------------------------------------------------------------------------------------------------
 // | ESC   |   1   |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   +   |
 // | TAB   |   !   |  @  |  #  |  $  |  %  |   [   |           ---        |  ]    |  ^  |  &  |  *   |  (   |  )   |   -   |
-// | ESC   |   Ä   |  `  |  '  |  "  | 4sp | DEL   |           ---        | RET   | ESC |  =  |  _   |  $   |  :   |   '   |
+// | ESC   |   Ä   |  `  |  '  |  "  | 4sp | DEL   |           ---        | RET   | ESC |  ?  |  ,   |  .   |  Ö   |   '   |
 // | SHIFT |   Z   |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  !  |  :  | HOME | END  |  UP  | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | RET   | DEL     | --- | BKSP | SPACE |   TOADJ   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
    &trans   &trans    &trans     &trans    &trans    &trans                                        &trans     &trans     &trans     &trans    &trans     &trans
    &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                     &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &trans
-   &trans   &l_uml_a  &kp GRAVE  &kp SQT   &kp DQT   &spc4      &trans                     &trans  &kp ESC    &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
-   &trans   &trans    &trans     &trans    &trans    &trans     &trans   &trans   &trans   &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &trans    &trans
+   &trans   &l_uml_a  &kp GRAVE  &kp SQT   &kp DQT   &spc4      &trans                     &trans  &kp ESC    &kp QMARK  &kp COMMA  &kp DOT   &l_uml_o   &trans
+   &trans   &trans    &trans     &trans    &trans    &trans     &trans   &trans   &trans   &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &trans     &trans
    &trans   &trans    &trans     &trans         &trans          &kp DEL  &kp DEL  &kp RET  &kp RET          &to 3        &trans     &trans    &trans     &trans
             >;
         };
@@ -170,15 +170,15 @@
 // ---------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1    |  2  |  3  |  4  |  5  |                   ---                |  6  |  7  |  8   |  9   |  0   |   +   |
 // | TAB   |  >    |  )  |  ]  |  }  |  \  |   [   |           ---        |  ]    |  ~  |  +  |  -   |  |   |  ;   |   '   |
-// | ESC   |  <    |  (  |  [  |  {  |  /  | DEL   |           ---        | RET   | ESC |  ?  |  ,   |  .   |  Ö   |   '   |
+// | ESC   |  <    |  (  |  [  |  {  |  /  | DEL   |           ---        | RET   | ESC |  =  |  _   |  $   |  :   |   '   |
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  !  |  :  | HOME | END  |  UP  | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   TOADJ   | RET   | DEL     | --- | BKSP | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
-   &trans  &trans  &trans    &trans    &trans    &trans                                       &trans     &trans     &trans     &trans    &trans    &trans
-   &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                     &trans  &kp TILDE  &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI  &trans
-   &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                     &trans  &kp ESC    &kp QMARK  &kp COMMA  &kp DOT   &l_uml_o  &trans
-   &trans  &trans  &trans    &trans    &trans    &trans    &trans   &trans   &trans   &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP    &trans
-   &trans  &trans  &trans    &trans          &to 3         &kp DEL  &kp DEL  &kp RET  &kp RET        &trans          &trans    &trans    &trans    &trans
+   &trans  &trans  &trans    &trans    &trans    &trans                                       &trans     &trans     &trans     &trans    &trans     &trans
+   &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                     &trans  &kp TILDE  &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI   &trans
+   &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                     &trans  &kp ESC    &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
+   &trans  &trans  &trans    &trans    &trans    &trans    &trans   &trans   &trans   &trans  &kp EXCL   &kp COLON  &kp HOME   &kp END   &kp UP     &trans
+   &trans  &trans  &trans    &trans          &to 3         &kp DEL  &kp DEL  &kp RET  &kp RET        &trans          &trans    &trans    &trans     &trans
             >;
        };
 
