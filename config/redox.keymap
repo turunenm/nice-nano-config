@@ -12,13 +12,6 @@
 
 / {
     behaviors {
-        &caps_word {
-            continue-list = <UNDERSCORE
-                             MINUS
-                             DELETE
-                             BACKSPACE
-                            >;
-        };
         i_uml_a: i_uml_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -115,8 +108,7 @@
                 , <&macro_tap &to 0>
                 ;
         };
-
-        bs4t0: bs24t0 {
+        bs4t0: bs4t0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -151,6 +143,15 @@
         };
 
     };
+};
+
+&caps_word {
+    continue-list = <
+                    UNDERSCORE
+                    MINUS
+                    DELETE
+                    BACKSPACE
+                    >;
 };
 
 / {

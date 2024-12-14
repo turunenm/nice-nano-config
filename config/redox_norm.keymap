@@ -10,9 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
-CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=10
-CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=10
-
 / {
     behaviors {
         l_uml_a: ac_uml_a {
