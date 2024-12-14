@@ -11,8 +11,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1
-CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=15
     behaviors {
         i_uml_a: i_uml_a {
             compatible = "zmk,behavior-macro";
