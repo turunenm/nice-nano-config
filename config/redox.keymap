@@ -140,7 +140,6 @@
                 , <&macro_tap &to 0>
                 ;
         };
-        }
         to0: to0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
