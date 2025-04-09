@@ -216,10 +216,10 @@
 // | SHIFT |  Z    |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME  | END   | C_WRD | ESC | HOME | END  |  UP  | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   TOADJ   | BKSP  | DEL     | --- | SPACE | SPACE |   RAISE   | CTRL | LEFT | DOWN | RIGHT |
             bindings = <
-   &trans  &trans  &trans    &trans    &trans    &trans                                       &trans     &trans     &trans     &trans    &trans     &trans
-   &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                     &trans  &i_tilde   &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI   &trans
-   &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                     &trans  &kp EXCL   &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
-   &trans  &trans  &trans    &trans    &trans    &trans    &trans   &trans   &trans   &trans  &kp C_WRD  &kp ESC    &kp HOME   &kp END   &kp UP     &trans
+   &trans  &trans  &trans    &trans    &trans    &trans                                       &trans      &trans     &trans     &trans    &trans     &trans
+   &trans  &kp GT  &kp RPAR  &kp RBKT  &kp RBRC  &kp BSLH  &trans                     &trans  &i_tilde    &kp PLUS   &kp MINUS  &kp PIPE  &kp SEMI   &trans
+   &trans  &kp LT  &kp LPAR  &kp LBKT  &kp LBRC  &kp FSLH  &trans                     &trans  &kp EXCL    &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
+   &trans  &trans  &trans    &trans    &trans    &trans    &trans   &trans   &trans   &trans  &caps_word  &kp ESC    &kp HOME   &kp END   &kp UP     &trans
    &trans  &trans  &trans    &trans          &to 3         &kp DEL  &trans  &kp RET  &kp RET        &trans         &trans     &trans    &trans     &trans
             >;
        };
