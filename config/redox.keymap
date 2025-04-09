@@ -200,10 +200,10 @@
 // | SHIFT |   Z   |  X  |  C  |  V  |  B  | PG_UP | PG_DOWN | --- | HOME  | END   | C_WRD | ESC | HOME | END  |  UP  | SHIFT |
 // | CRTL  | PSCRN | GUI | ALT |   LOWER   | BKSP  | DEL     | --- | SPACE | SPACE |   RAISE   | CTRL | LEFT | DOWN  | RIGHT |
             bindings = <
-   &trans   &trans    &trans     &trans    &trans    &trans                                        &trans     &trans     &trans     &trans    &trans     &trans
-   &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                     &trans  &i_caret   &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &trans
-   &trans   &i_uml_a  &i_grave   &i_sqt    &i_dqt    &spc4      &trans                     &trans  &kp EXCL   &kp QMARK  &kp COMMA  &kp DOT   &i_uml_o   &trans
-   &trans   &trans    &trans     &trans    &trans    &trans     &trans   &trans   &trans   &trans  &kp C_WRD  &kp ESC    &kp HOME   &kp END   &trans     &trans
+   &trans   &trans    &trans     &trans    &trans    &trans                                        &trans      &trans     &trans     &trans    &trans     &trans
+   &trans   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                     &trans  &i_caret    &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &trans
+   &trans   &i_uml_a  &i_grave   &i_sqt    &i_dqt    &spc4      &trans                     &trans  &kp EXCL    &kp QMARK  &kp COMMA  &kp DOT   &i_uml_o   &trans
+   &trans   &trans    &trans     &trans    &trans    &trans     &trans   &trans   &trans   &trans  &caps_word  &kp ESC    &kp HOME   &kp END   &trans     &trans
    &trans   &trans    &trans     &trans         &trans          &kp DEL  &trans  &kp RET  &kp RET          &to 3        &trans     &trans    &trans     &trans
             >;
         };
