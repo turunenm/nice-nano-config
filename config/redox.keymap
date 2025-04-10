@@ -54,13 +54,13 @@
             bindings = <&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
         };
         bn_m: bt_next_mod {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_NXT>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         bp_m: bt_prev_mod {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_PRV>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
@@ -72,7 +72,7 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         ot_m: out_tog_mod {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&none>, <&out OUT_TOG>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
@@ -104,13 +104,13 @@
         };
 
         hi_ht: hi_hold_tap {
-            compatible = "zmk, behavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&sl 2>;
         };
         lo_ht: lo_hold_tap {
-            compatible = "zmk, behavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&sl 1>;
