@@ -206,8 +206,8 @@
 // |     |    |     |     |   TODEF   | SFT | CTL | --- | ALT | SPC |   TODEF   |     |      |     |     |
             bindings = <
    &trans  &trans  &trans   &trans   &trans   &trans                                     &trans   &trans  &trans  &trans  &trans  &trans
-   &trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp N_LCK  &trans                  &trans  &cd_m    &kp N7  &kp N8  &kp N9  &pm_m   &trans
-   &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp INS    &trans                  &trans  &kp RET  &kp N4  &kp N5  &kp N6  &md_m   &kp BKSP
+   &trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp N_LCK  &trans                  &trans  &kp A    &kp N7  &kp N8  &kp N9  &kp B   &trans
+   &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp INS    &trans                  &trans  &kp RET  &kp N4  &kp N5  &kp N6  &kp C   &kp BKSP
    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp S_LCK  &trans  &trans  &trans  &trans  &kp N0   &kp N1  &kp N2  &kp N3  &lr_m   &kp DEL
    &trans  &trans  &trans   &trans        &to 0          &trans  &trans  &trans  &trans        &to 0      &trans  &trans  &trans  &trans
             >;
