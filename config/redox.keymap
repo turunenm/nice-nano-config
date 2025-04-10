@@ -170,11 +170,11 @@
 // | GUI | C+Z | C+X | C+C | C+V | C+B |     |     | --- |     |     | 4sp | ESC | BSP | DEL | CAP | GUI |
 // |     |     |     |     |   TONUM   | SFT | CTL | --- | ALT | SPC |   MO-HI   |     |     |     |     |
             bindings = <
-   &trans  &trans     &trans     &trans     &trans     &trans                                     &trans    &trans     &trans     &trans    &trans     &trans
-   &trans  &kp GT     &kp RPAR   &kp RBKT   &kp RBRC   &kp BSLH   &trans                  &trans  &none     &kp PLUS   &kp MINUS  &kp PIPE  &none      &trans
-   &trans  &kp LT     &kp LPAR   &kp LBKT   &kp LBRC   &kp FSLH   &trans                  &trans  &kp EXCL  &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
-   &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans     &trans
-   &trans  &trans     &trans     &trans             &to 0          &trans  &trans  &trans  &trans        &to 3         &trans     &trans    &trans     &trans
+   &trans  &trans     &trans     &trans     &trans     &trans                                      &trans    &trans     &trans     &trans    &trans      &trans
+   &trans  &kp GT     &kp RPAR   &kp RBKT   &kp RBRC   &kp BSLH   &trans                   &trans  &none     &kp PLUS   &kp MINUS  &kp PIPE  &none       &trans
+   &trans  &kp LT     &kp LPAR   &kp LBKT   &kp LBRC   &kp FSLH   &trans                   &trans  &kp EXCL  &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON   &trans
+   &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans  &trans  &trans   &trans  &sp4      &kp ESC    &kp BKSP   &kp DEL   &caps_word  &trans
+   &trans  &trans     &trans     &trans             &to 0          &trans  &trans  &trans  &trans        &to 3         &trans     &trans    &trans      &trans
             >;
        };
 
@@ -186,11 +186,11 @@
 // | GUI | C+Z  | C+X | C+C  | C+V | C+B |     |     | --- |     |     | 4sp | ESC | BSP | DEL | CAP | GUI |
 // |     |      |     |      |   TODEF   | SFT | CTL | --- | ALT | SPC |   TODEF   |     |     |     |     |
             bindings = <
-   &trans  &trans           &trans       &trans           &trans       &trans                                     &trans  &trans     &trans    &trans     &trans    &trans
-   &trans  &bc_m            &none        &bp_m            &bn_m        &ot_m      &trans                  &trans  &none   &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME  &trans
-   &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp PSCRN  &trans                  &trans  &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &trans
-   &trans  &kp LC(Z)        &kp LC(X)    &kp LC(C)        &kp LC(V)    &kp LC(B)  &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans     &trans    &trans
-   &trans  &trans           &trans       &trans        &to 0           &trans     &trans  &trans  &trans  &trans       &to 0         &trans    &trans     &trans    &trans
+   &trans  &trans           &trans       &trans           &trans       &trans                                     &trans  &trans     &trans    &trans     &trans      &trans
+   &trans  &bc_m            &none        &bp_m            &bn_m        &ot_m      &trans                  &trans  &none   &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME    &trans
+   &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp PSCRN  &trans                  &trans  &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END     &trans
+   &trans  &kp LC(Z)        &kp LC(X)    &kp LC(C)        &kp LC(V)    &kp LC(B)  &trans  &trans  &trans  &trans  &sp4    &kp ESC    &kp BKSP  &kp DEL    &caps_word  &trans
+   &trans  &trans           &trans       &trans        &to 0           &trans     &trans  &trans  &trans  &trans       &to 0         &trans    &trans     &trans      &trans
             >;
         };
 
