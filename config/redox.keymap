@@ -208,7 +208,7 @@
    &trans  &trans  &trans   &trans  &trans   &trans                                     &trans   &trans   &trans  &trans  &trans  &trans
    &trans  &kp F9  &kp F10  &kp F11 &kp F12  &kp N_LCK  &trans                  &trans  &cdm     &kp N7   &kp N8  &kp N9  &pmm    &trans
    &trans  &kp F5  &kp F6   &kp F7  &kp F8   &kp INS    &trans                  &trans  &kp RET  &kp N4   &kp N5  &kp N6  &mdm    &kp BKSP
-   &trans  &kp F1  &kp F2   &kp F3  &kp F4   &kp S_LCK  &trans  &trans  &trans  &trans  &kp n0   &kp N1   &kp N2  &kp N3  &lrm    &kp DEL
+   &trans  &kp F1  &kp F2   &kp F3  &kp F4   &kp S_LCK  &trans  &trans  &trans  &trans  &kp N0   &kp N1   &kp N2  &kp N3  &lrm    &kp DEL
    &trans  &trans  &trans   &trans       &to 0          &trans  &trans  &trans  &trans        &to 0       &trans  &trans  &trans  &trans
             >;
         };
