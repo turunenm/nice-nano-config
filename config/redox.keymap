@@ -57,50 +57,50 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_NXT>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         bpm: bt_prev_mod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_PRV>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         bcm: bt_clr_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_CLR>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         otm: out_tog_mod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none>, <&out OUT_TOG>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
 
         pmm: plus_minus_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_PLUS>, <&kp KP_MINUS>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         mdm: mp_div_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_MULTIPLY>, <&kp KP_DIVIDE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         cdm: comma_dot_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_COMMA>, <&kp KP_DOT>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
         lrm: lpar_rpar_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_LPAR>, <&kp KP_RPAR>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
 
         thn: tap_dance_hi_nav {
