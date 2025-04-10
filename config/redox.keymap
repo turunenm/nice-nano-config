@@ -22,12 +22,12 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp DQT>, <&macro_tap &kp O>;
         };
-        i_dt: i_double_quote {
+        i_dq: i_double_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp DQT>, <&macro_tap &kp SPACE>;
         };
-        i_st: i_single_quote {
+        i_sq: i_single_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp SQT>, <&macro_tap &kp SPACE>;
@@ -56,13 +56,13 @@
         bnm: bt_next_mod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, &bt BT_NXT>;
+            bindings = <&none>, <&bt BT_NXT>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
         };
         bpm: bt_prev_mod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, &bt BT_NXT>;
+            bindings = <&none>, <&bt BT_PRV>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
         };
         bcm: bt_clr_mod {
@@ -74,7 +74,7 @@
         otm: out_tog_mod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, &out OUT_TOG>;
+            bindings = <&none>, <&out OUT_TOG>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTRL)>;
         };
 
@@ -104,16 +104,16 @@
         };
 
         thn: tap_dance_hi_nav {
-            compatible = "zmk, behavior-tap-dance";
+            compatible = "zmk, behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&to 3>;
+            bindings = <&mo 2>, <&sl 2>;
         };
         tln: tap_dance_lo_num {
-            compatible = "zmk, behavior-tap-dance";
+            compatible = "zmk, behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 4>;
+            bindings = <&mo 1>, <&sl 1>;
         };
 
     };
@@ -155,13 +155,13 @@
 // | ALT |  !  |  @  |  #  |  $  |  %  |     |     | --- |     |     |  ^  |  &  |  *  |  (  |  )  | CTL |
 // | TAB |  Ä  |  `  |  '  |  "  |  ~  |     |     | --- |     |     | RET |  ?  |  ,  |  .  |  Ö  | SFT |
 // | GUI |  ^  |  `  |  '  |  "  |  ~  |     |     | --- |     |     | 4sp | ESC | BSP | DEL | CAP | GUI |
-// |     |     |     |     |           | SFT | CTL | --- | ALT | SPC |   TONAV   |     |     |     |     |
+// |     |     |     |     |   TONUM   | SFT | CTL | --- | ALT | SPC |   TODEF   |     |     |     |     |
             bindings = <
    &trans   &trans     &trans     &trans    &trans    &trans                                       &trans    &trans     &trans     &trans    &trans      &trans
-   &trans   &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                    &trans  &i_caret  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR    &trans
-   &trans   &i_uml_a   &i_grave   &i_sqt    &i_dqt    &i_tilde   &trans                    &trans  &kp RET   &kp QMARK  &kp COMMA  &kp DOT   &i_uml_o    &trans
+   &trans   &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &trans                    &trans  &i_ct     &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR    &trans
+   &trans   &i_ua      &i_gr      &i_sq     &i_dq    &i_td       &trans                    &trans  &kp RET   &kp QMARK  &kp COMMA  &kp DOT   &i_uo       &trans
    &trans   &kp CARET  &kp GRAVE  &kp SQT   &kp DQT   &kp TILDE  &trans   &trans   &trans  &trans  &sp4      &kp ESC    &kp BKSP   &kp DEL   &caps_word  &trans
-   &trans   &trans     &trans     &trans          &trans         &trans   &trans   &trans  &trans        &to 3          &trans     &trans   &trans      &trans
+   &trans   &trans     &trans     &trans          &to 4          &trans   &trans   &trans  &trans        &to 0          &trans     &trans    &trans      &trans
             >;
         };
 
@@ -171,13 +171,13 @@
 // | ALT |  >  |  )  |  ]  |  }  |  \  |     |     | --- |     |     |     |  +  |  -  |  |  |     | CTL |
 // | TAB |  <  |  (  |  [  |  {  |  /  |     |     | --- |     |     | RET |  =  |  _  |  $  |  :  | SFT |
 // | GUI | C+Z | C+X | C+C | C+V | C+B |     |     | --- |     |     | 4sp | ESC | BSP | DEL | CAP | GUI |
-// |     |     |     |     |   TONUM   | SFT | CTL | --- | ALT | SPC |           |     |     |     |     |
+// |     |     |     |     |   TONUM   | SFT | CTL | --- | ALT | SPC |   MO-HI   |     |     |     |     |
             bindings = <
    &trans  &trans     &trans     &trans     &trans     &trans                                     &trans    &trans     &trans     &trans    &trans     &trans
    &trans  &kp GT     &kp RPAR   &kp RBKT   &kp RBRC   &kp BSLH   &trans                  &trans  &none     &kp PLUS   &kp MINUS  &kp PIPE  &none      &trans
    &trans  &kp LT     &kp LPAR   &kp LBKT   &kp LBRC   &kp FSLH   &trans                  &trans  &kp EXCL  &kp EQUAL  &kp UNDER  &kp DLLR  &kp COLON  &trans
    &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans     &trans
-   &trans  &trans     &trans     &trans             &to4          &trans  &trans  &trans  &trans        &trans         &trans     &trans    &trans     &trans
+   &trans  &trans     &trans     &trans             &to 0          &trans  &trans  &trans  &trans        &to 3         &trans     &trans    &trans     &trans
             >;
        };
 
