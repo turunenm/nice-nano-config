@@ -103,13 +103,13 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
         };
 
-        thn: tap_dance_hi_nav {
+        hi_ht: hi_hold_tap {
             compatible = "zmk, behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&sl 2>;
         };
-        tln: tap_dance_lo_num {
+        lo_ht: lo_hold_tap {
             compatible = "zmk, behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -140,11 +140,11 @@
 // | GUI |  Z  |  X  |  C  |  V  |  B  |     |     | --- |     |     |  K  |  M  |  ,  |  .  |  ;  | GUI |
 // |     |     |     |     |   MO-LO   | SFT | CTL | --- | ALT | SPC |   MO-HI   |     |     |     |     |
             bindings = <
-   &none     &none  &none  &none  &none  &none                                             &none   &none   &none      &none     &none     &none
-   &kp LALT  &kp Q  &kp W  &kp F  &kp P  &kp G  &none                           &none      &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp LCTRL
-   &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D  &none                           &none      &kp H   &kp N   &kp E      &kp I     &kp O     &kp LSHFT
-   &kp LGUI  &kp Z  &kp X  &kp C  &kp V  &kp B  &none      &none      &none     &none      &kp K   &kp M   &kp COMMA  &kp DOT   &kp SEMI  &kp LGUI
-   &none     &none  &none  &none      &tln      &kp LSHFT  &kp LCTRL  &kp LALT  &kp SPACE      &thn        &none      &none     &none     &none
+   &none     &none  &none  &none  &none  &none                                             &none  &none   &none      &none    &none     &none
+   &kp LALT  &kp Q  &kp W  &kp F  &kp P  &kp G  &none                           &none      &kp J  &kp L   &kp U      &kp Y    &kp SEMI  &kp LCTRL
+   &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D  &none                           &none      &kp H  &kp N   &kp E      &kp I    &kp O     &kp LSHFT
+   &kp LGUI  &kp Z  &kp X  &kp C  &kp V  &kp B  &none      &none      &none     &none      &kp K  &kp M   &kp COMMA  &kp DOT  &kp SEMI  &kp LGUI
+   &none     &none  &none  &none     &lo_ht     &kp LSHFT  &kp LCTRL  &kp LALT  &kp SPACE     &hi_ht      &none      &none    &none     &none
             >;
 
         };
